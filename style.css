@@ -11,10 +11,10 @@ h3,p,h4,pre,button{
 }
 
 section{
-	height:100vh;
-}
-section#GALLERY{
 	height:auto;
+}
+section#TOP{
+	height:100VH;
 }
 .padding-texttop{
 	padding-top: 26vh;
@@ -82,6 +82,14 @@ a.nav-link {
 .map-container{
 	overflow:auto;
 }
+
+@media (min-height:500px){
+	
+	section{
+		height:100vh;
+	}
+}
+
 @media (min-width:767px){
 	
 	.expand-width{
@@ -100,6 +108,12 @@ a.nav-link {
 	a.nav-link {
 		border-bottom: solid 1px;
 		padding: 1rem 2rem 1rem 2rem!important;
+	}
+	a.navbar-brand {
+		padding: 1rem;
+	}
+	button.navbar-toggler{
+		margin:1rem;
 	}
 }
 
