@@ -17,14 +17,22 @@ section#GALLERY{
 	height:auto;
 }
 .padding-texttop{
-	padding-top: 15vw;
+	padding-top: 26vh;
 }
 .padding-top-main-text{
     padding-top: 35px;
 }
+.row{
+	margin:0!important;
+}
 pre{
 	font-size: 1rem!important;
 	overflow: unset!important;
+	white-space: pre-wrap;       /* Since CSS 2.1 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 .padding-top-secondary-txt {
@@ -53,6 +61,10 @@ pre{
     width: 100%;
     height: auto;
 }
+#MAP img{
+	min-width: 652px;
+	padding-bottom: 15px;
+}
 ul.navbar-nav {
     margin: auto;
 }
@@ -67,3 +79,27 @@ a.nav-link {
     z-index: 1111;
     opacity: 0.8;
 }
+.map-container{
+	overflow:auto;
+}
+@media (min-width:767px){
+	
+	.expand-width{
+		min-width: 865px;
+	}
+}
+@media (max-width:767px){
+	
+	ul.navbar-nav {
+		width: 100%;
+		
+	}
+	.navbar {
+		padding: 0!important;
+	}
+	a.nav-link {
+		border-bottom: solid 1px;
+		padding: 1rem 2rem 1rem 2rem!important;
+	}
+}
+
