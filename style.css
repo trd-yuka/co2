@@ -13,6 +13,9 @@ h3,p,h4,pre,button{
 section{
 	height:auto;
 }
+section:nth-child(even){
+	background:#fffffc;
+}
 section#TOP{
 	height:100VH;
 }
@@ -48,6 +51,7 @@ pre{
 }
 .center {
     margin: auto;
+	padding: 0!important;
 }
 #COMMENTS p {
     margin-bottom: 0;
@@ -69,29 +73,79 @@ pre{
 	overflow:auto;
 }
 
+
 /*
 map list 
 */
 #listmap{
 	position: absolute;
 }
+.flag-wrapper {
+    box-shadow: none !important;
+    border: solid 1px #bababa;
+}
+.flag-wrapper .flag {
+    border: 0;
+}
 #listmap li{
 	list-style: none;
 	position: relative;
+	width: 25px;
+	height: 16px;
 }
-
-li#jap{
-	top: 165px;
-	right: -259px;
+li#jap {
+	top: 167px;
+	right: -260px;
+}
+.inline{
+	display:inline-block;
+	height: 13px
 }
 li#phil {
 	top: 197px;
 	left: 232px;
 }
 li#ny {
-    top: 110px;
-    left: 529px;
+    top: 140px;
+    left: 505px;
 }
+li#korea {
+    top: 130px;
+    left: 234px;
+}
+li#thailand {
+    top: 160px;
+    left: 200px;
+}
+li#indo {
+    top: 180px;
+    left: 210px;
+}
+li#france {
+    top: 50px;
+    left: 5px;
+}
+li#italy {
+    top: 50px;
+    left: 42px;
+}
+.no-padding{
+	padding:0!important;
+}
+
+
+/* #listmap{
+	position: absolute;
+}
+
+
+
+li#phil {
+	top: 197px;
+	left: 232px;
+}
+
+} */
 /*
 nav menu 
 */
@@ -105,14 +159,15 @@ nav menu
 	display:none!important;
 }
 a#dropdownMenuLink {
-    right: 50;
-    top: 50;
+    right: 20px;
+    top: 28px;
     position: absolute;
     z-index:11111;
 }
 .dropdown-menu {
     top: -53px!important;
-    left: -40px!important;
+    left: -14px!important;
+    opacity: 0.8;
 }
 a.dropdown-item:first-child {
     margin-top: 45px;
@@ -122,6 +177,20 @@ a.dropdown-item {
     padding: 13px 10px;
     width: 250px;
 }
+
+/*
+galley
+*/
+
+.inner-gal {
+	width: 50%;
+	height: 538px;
+	margin: auto;
+	overflow-y: scroll;
+	border: solid 1px;
+	background: #ffffff;
+}
+
 
 @media (min-height:500px){
 	
@@ -135,9 +204,18 @@ a.dropdown-item {
 	.expand-width{
 		min-width: 865px;
 	}
+	
 }
 @media (max-width:767px){
 	
+	.inner-gal {
+	width: 80%;
+	}
+}
+@media (max-width:425px){
 	
+	.inner-gal {
+	width: 80%;
+	}
 }
 
