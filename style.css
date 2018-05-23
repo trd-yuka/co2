@@ -92,43 +92,36 @@ li#ny {
     top: 110px;
     left: 529px;
 }
-
-/*hamburger*/
-.dropdown.hamburger_menu{
-    position: absolute;
-    right: 0;
-}
+/*
+nav menu 
+*/
 .hambMenu {
     width: 36px;
-    background: #bababa;
-    height: 3;
-    margin: 9px 0 0 0;
+    height: 3px;
+    background-color: #bababa;
+    margin-bottom: 7px;
 }
-.dropdown-toggle::after {
-    display: none!important;
+.dropdown-toggle::after{
+	display:none!important;
 }
-.dropdown-menu{
-    left: -170px!important;
-    top: -5px!important;
+a#dropdownMenuLink {
+    right: 50;
+    top: 50;
+    position: absolute;
+    z-index:11111;
 }
-.dropdown.hamburger_menu {
-    top: 50px;
-    right: 50px;
+.dropdown-menu {
+    top: -53px!important;
+    left: -40px!important;
 }
-
-a#navdrop {
-    position: relative;
-    z-index: 11111;
+a.dropdown-item:first-child {
+    margin-top: 45px;
 }
 a.dropdown-item {
     border-bottom: solid 1px;
-    padding: 16px 10px;
+    padding: 13px 10px;
     width: 250px;
 }
-a.dropdown-item:first-child {
-    margin-top: 50px;
-}
-
 
 @media (min-height:500px){
 	
