@@ -65,23 +65,70 @@ pre{
 	min-width: 652px;
 	padding-bottom: 15px;
 }
-ul.navbar-nav {
-    margin: auto;
-}
-a.nav-link {
-    padding: 0 2rem 0 2rem!important;
-    color: #000000;
-}
-.navbar-fixed-top {
-    position: fixed!important;
-    right: 0;
-    left: 0;
-    z-index: 1111;
-    opacity: 0.8;
-}
 .map-container{
 	overflow:auto;
 }
+
+/*
+map list 
+*/
+#listmap{
+	position: absolute;
+}
+#listmap li{
+	list-style: none;
+	position: relative;
+}
+
+li#jap{
+	top: 165px;
+	right: -259px;
+}
+li#phil {
+	top: 197px;
+	left: 232px;
+}
+li#ny {
+    top: 110px;
+    left: 529px;
+}
+
+/*hamburger*/
+.dropdown.hamburger_menu{
+    position: absolute;
+    right: 0;
+}
+.hambMenu {
+    width: 36px;
+    background: #bababa;
+    height: 3;
+    margin: 9px 0 0 0;
+}
+.dropdown-toggle::after {
+    display: none!important;
+}
+.dropdown-menu{
+    left: -170px!important;
+    top: -5px!important;
+}
+.dropdown.hamburger_menu {
+    top: 50px;
+    right: 50px;
+}
+
+a#navdrop {
+    position: relative;
+    z-index: 11111;
+}
+a.dropdown-item {
+    border-bottom: solid 1px;
+    padding: 16px 10px;
+    width: 250px;
+}
+a.dropdown-item:first-child {
+    margin-top: 50px;
+}
+
 
 @media (min-height:500px){
 	
@@ -98,22 +145,6 @@ a.nav-link {
 }
 @media (max-width:767px){
 	
-	ul.navbar-nav {
-		width: 100%;
-		
-	}
-	.navbar {
-		padding: 0!important;
-	}
-	a.nav-link {
-		border-bottom: solid 1px;
-		padding: 1rem 2rem 1rem 2rem!important;
-	}
-	a.navbar-brand {
-		padding: 1rem;
-	}
-	button.navbar-toggler{
-		margin:1rem;
-	}
+	
 }
 
