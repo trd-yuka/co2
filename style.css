@@ -1,11 +1,7 @@
 @charset "UTF-8";
 
-@font-face {
-    font-family: yugothib;
-    src: url(yugothib.ttf);
-}
 h3,p,h4,pre,button{
-	font-family:yugothib,"Yu Gothic Medium","游ゴシック Medium","游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ",sans-serif!important;
+	font-family:YuGothic,"Yu Gothic Medium","游ゴシック Medium","游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ",sans-serif!important;
 }
 
 #TOP h3{
