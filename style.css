@@ -8,14 +8,17 @@ h3,p,h4,pre,button{
 	line-height: 1.5
 }
 
-section{
-	height:auto;
+section#CONCEPT,#GALLERY,#MAP{
+	height:auto!important;
+}
+#GALLERY{
+    padding-bottom: 30px;
 }
 section:nth-child(even),body.background{
 	background:#FBF6F0;
 }
 
-section#TOP{
+section{
 	height:100VH;
 }
 .padding-texttop{
