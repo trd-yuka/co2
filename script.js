@@ -15,5 +15,22 @@ $(document).ready(function(){
 		
 		$("#collapsibledropdown").hide();
 	});
+	
+	$("#sendemail").click(function(){
+		
+		var data = {"messgae" : $("#message").val()};
+		
+	    $.ajax({
+	    	url: "ajax.php",
+	    	type: "post",
+	    	data: data,
+	    	success: function(result){
+	        if(result !=0){
+	        	alert("messgae sent!");
+	        }else{
+	        	alert("messgae not sent!");
+	        }
+	    }});
+	});
 
 });
