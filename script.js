@@ -18,19 +18,38 @@ $(document).ready(function(){
 	
 	$("#sendemail").click(function(){
 		
-		var data = {"messgae" : $("#message").val()};
+		var data = {"messgae" : $("#message").val(),
+				"sender" : $("#sender").val()};
 		
 	    $.ajax({
 	    	url: "ajax.php",
 	    	type: "post",
 	    	data: data,
 	    	success: function(result){
-	        if(result !=0){
-	        	alert("messgae sent!");
-	        }else{
-	        	alert("messgae not sent!");
-	        }
-	    }});
+		        if(result == 1){
+		        		$("#message").val("");
+			        	$("#sender").val("");
+			        	$("#invalid").remove();
+			        	alert("messgae sent!");
+		        }
+		        	
+		    	if(result == 2){
+		    		$("<p style='color : red' id='invalid'>invalid email!!</p>").insertBefore( $("#sender") );
+		    	}
+		    	
+//		    	if(result == 3){
+//		    		$("<p style='color : red' id='invalid'>required!!</p>").insertBefore( $("#sender") );
+//		    	}
+//		    	if(result == 4){
+//		    		$("<p style='color : red' id='invalid'>required!!</p>").insertBefore( $("#message") );
+//		    	}
+		    	
+		    	
+		    	if(result == 0){
+			    	alert("messgae not sent!");
+		    	}
+	    	}
+	    });
 	});
 
 });
