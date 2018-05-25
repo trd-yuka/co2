@@ -22,6 +22,9 @@ section{
 .padding-texttop{
 	padding-top: 26vh;
 }
+.padding-text-content{
+	padding-top: 20vh;
+}
 .padding-top-main-text{
     padding-top: 35px;
 }
