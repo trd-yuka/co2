@@ -8,9 +8,7 @@ h3,p,h4,pre,button{
 	line-height: 1.5
 }
 
-section#CONCEPT,#GALLERY,#MAP{
-	height:auto!important;
-}
+
 #GALLERY{
     padding-bottom: 30px;
 }
@@ -237,11 +235,12 @@ a {
 	}
 	
 }
-@media (max-width:767px){
+@media (max-width:768px){
 	
 	.inner-gal {
 	width: 80%;
 	}
+	
 }
 @media (max-width:425px){
 	
@@ -249,4 +248,12 @@ a {
 	width: 80%;
 	}
 }
+
+@media (max-height:645px){
+	
+	section#CONCEPT,section#MAP,section#GALLERY{
+	height:auto!important;
+	}
+}
+
 
