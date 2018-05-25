@@ -24,11 +24,11 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 // }
 
 $sent = 0;
-$to = "trd.yuka@gmail.com";
+$to = "y08053166202@gmail.com";
 $subject = "コメント";
 $txt = $msg;
 $headers = "From: $sender" . "\r\n" .
-    "CC: trd.ricz@gmail.com";
+    "CC: trd.yuka@gmail.com";
 
 if(mail($to,$subject,$txt,$headers)){
     $sent = 1;

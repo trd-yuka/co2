@@ -263,6 +263,10 @@ a.footer-padding {
     color: #000;
     font-size:24px;
 }
+
+section#COMMENTS{
+	height:auto!important;
+}
 @media (min-width:767px){
 	
 	.expand-width{
