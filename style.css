@@ -244,6 +244,10 @@ a {
 	width: 80%;
 	}
 	
+	.padding-text-content{
+	padding-top: 15vh;
+	}
+	
 }
 @media (max-width:425px){
 	
