@@ -17,7 +17,7 @@ $(document).ready(function(){
 	});
 	
 	$("#sendemail").click(function(){
-		
+
 		var data = {"messgae" : $("#message").val(),
 				"sender" : $("#sender").val()};
 		
@@ -26,27 +26,39 @@ $(document).ready(function(){
 	    	type: "post",
 	    	data: data,
 	    	success: function(result){
-		        if(result == 1){
-		        		$("#message").val("");
-			        	$("#sender").val("");
-			        	$("#invalid").remove();
-			        	alert("messgae sent!");
-		        }
+	    		
+	    		res = JSON.parse(result);
+	    		
+		        if(res[jQuery.inArray( "invalidEmail", res)] == "invalidEmail"){
 		        	
-		    	if(result == 2){
-		    		$("<p style='color : red' id='invalid'>invalid email!!</p>").insertBefore( $("#sender") );
+		        	if(!$("#invalid").length){
+		    			$('<div id="invalid" class="alert alert-danger"><strong>注意</strong> メールアドレスを入力して下さい。</div>').insertBefore( $("#sender") );
+		    		}
+		        	$("#success").remove();
+		        		
+		        }else{
+	    			if($("#invalid").length){
+	    				$("#invalid").remove();
+	    			}
+	    		}
+		        	
+		        if(res[jQuery.inArray( "invalidMsg", res)] == "invalidMsg"){
+		        	if(!$("#invalid-msg").length){
+		        		$('<div id="invalid-msg" class="alert alert-danger"><strong>注意</strong> メッセージを入力して下さい。。</div>').insertBefore( $("#message") );
+					}
+		        	$("#success").remove();
+		    	}else{
+		    		if($("#invalid-msg").length){
+						$("#invalid-msg").remove();
+					}
 		    	}
-		    	
-//		    	if(result == 3){
-//		    		$("<p style='color : red' id='invalid'>required!!</p>").insertBefore( $("#sender") );
-//		    	}
-//		    	if(result == 4){
-//		    		$("<p style='color : red' id='invalid'>required!!</p>").insertBefore( $("#message") );
-//		    	}
-		    	
-		    	
-		    	if(result == 0){
-			    	alert("messgae not sent!");
+		    	if(res[0] == "sent"){
+		    		$("#message").val("");
+		        	$("#sender").val("");
+		        	$("#invalid").remove();
+		        	$("#invalid-msg").remove();
+		        	$(".form-container") .prepend('<div id="success" class="alert alert-success">送信されました。</div>' );
+		    		
 		    	}
 	    	}
 	    });
