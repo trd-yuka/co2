@@ -132,6 +132,10 @@ li#italy {
     top: 50px;
     left: 42px;
 }
+li#Australia {
+    top: 160px;
+    left: 260px;
+}
 .no-padding{
 	padding:0!important;
 }
@@ -248,10 +252,10 @@ button#sendemail {
     font-size: 24px;
     border-radius: 10px;
 }
-.buttom-color{
-	background-color: #6f6b64!important;
+.buttom-color {
+    background-color: #6f6b64!important;
+    border-color: #333333!important;
 }
-
 /*
 footer
 */
@@ -267,6 +271,11 @@ a.footer-padding {
 section#COMMENTS{
 	height:auto!important;
 }
+div#collapsibledropdown {
+    padding-bottom: 0;
+}
+
+
 @media (min-width:767px){
 	
 	.expand-width{
@@ -294,8 +303,16 @@ section#COMMENTS{
 
 @media (max-height:668px){
 	
-	section#CONCEPT,section#MAP,section#GALLERY,section#COMMENTS{
+	section#CONCEPT,section#MAP,section#GALLERY,section#CATEGORY,section#COMMENTS{
 	height:auto!important;
+	}
+}
+
+@media (max-height:425px){
+	
+	div#collapsibledropdown{
+		height: 80vh;
+		overflow: auto;
 	}
 }
 @media (max-width:320px){
